@@ -51,7 +51,25 @@
 
 ---
 
-### Linux（统信 UOS 20 / Deepin）
+### Linux（统信 UOS 20 / Deepin / Ubuntu / Debian）
+
+#### 方式 1：直接安装 `.deb` 安装包（推荐，同时兼容 ARM64 与 x86_64）
+
+从 GitHub [Releases](https://github.com/zeolot/ai-usage-tray/releases) 下载 `ai-usage-tray_1.0.0_all.deb`，双击或执行：
+
+```bash
+sudo apt install ./ai-usage-tray_1.0.0_all.deb
+```
+
+安装后可直接从系统应用菜单启动 **AI 用量统计**，或在终端运行 `ai-usage-tray --show`。
+
+自行重新构建 `.deb`：
+
+```bash
+./build_deb.sh 1.0.0
+```
+
+#### 方式 2：从源码直接运行
 
 1. 系统自带 Python 3 与 PyQt5 时无需额外安装依赖（其他发行版可执行 `pip3 install -r requirements.txt`）。
 2. 启动到任务栏托盘并首次弹出面板：
